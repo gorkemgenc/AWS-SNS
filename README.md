@@ -11,16 +11,16 @@ AWS SDK push notification service is used for sending push notification to users
 // Constructing Google GCM message
 public string getGCMMessage(object notification, string title)
 {
-    Dictionary<string, object> payload = new Dictionary<string, object>();
-    payload.Add("message", title);
-    payload.Add("objectInfo", notification);
-    Dictionary<string, object> androidMessageMap = new Dictionary<string, object>();
-    androidMessageMap.Add("collapse_key", "Welcome");
-    androidMessageMap.Add("data", payload);
-    androidMessageMap.Add("delay_while_idle", true);
-    androidMessageMap.Add("time_to_live", 0);
-    androidMessageMap.Add("dry_run", false);
-    return JsonConvert.SerializeObject(androidMessageMap);
+    Dictionary<string, object> payload = new Dictionary<string, object>();                                         
+    payload.Add("message", title);                   
+    payload.Add("objectInfo", notification);             
+    Dictionary<string, object> androidMessageMap = new Dictionary<string, object>();       
+    androidMessageMap.Add("collapse_key", "Welcome");        
+    androidMessageMap.Add("data", payload);              
+    androidMessageMap.Add("delay_while_idle", true);      
+    androidMessageMap.Add("time_to_live", 0);          
+    androidMessageMap.Add("dry_run", false);            
+    return JsonConvert.SerializeObject(androidMessageMap);      
 }
 
 /// Constructing Apple APNS message content
