@@ -27,6 +27,7 @@ public string getGCMMessage(object notification, string title)
 /// Constructing Apple APNS message content      
 public string getAPNSMessage(object notification, string title)      
 {         
+
      Dictionary<string, object> appleMessageMap = new Dictionary<string, object>();         
      Dictionary<string, object> appMessageMap = new Dictionary<string, object>();          
      appMessageMap.Add("alert", title);         
