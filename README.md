@@ -11,29 +11,29 @@ AWS SDK push notification service is used for sending push notification to users
 // Constructing Google GCM message          
 public string getGCMMessage(object notification, string title)        
 {        
-    Dictionary<string, object> payload = new Dictionary<string, object>();                                         
-    payload.Add("message", title);                   
-    payload.Add("objectInfo", notification);             
-    Dictionary<string, object> androidMessageMap = new Dictionary<string, object>();       
-    androidMessageMap.Add("collapse_key", "Welcome");        
-    androidMessageMap.Add("data", payload);              
-    androidMessageMap.Add("delay_while_idle", true);      
-    androidMessageMap.Add("time_to_live", 0);          
-    androidMessageMap.Add("dry_run", false);            
-    return JsonConvert.SerializeObject(androidMessageMap);      
+     Dictionary<string, object> payload = new Dictionary<string, object>();                                         
+     payload.Add("message", title);                   
+     payload.Add("objectInfo", notification);             
+     Dictionary<string, object> androidMessageMap = new Dictionary<string, object>();       
+     androidMessageMap.Add("collapse_key", "Welcome");        
+     androidMessageMap.Add("data", payload);              
+     androidMessageMap.Add("delay_while_idle", true);      
+     androidMessageMap.Add("time_to_live", 0);          
+     androidMessageMap.Add("dry_run", false);            
+     return JsonConvert.SerializeObject(androidMessageMap);      
 }       
       
 /// Constructing Apple APNS message content      
 public string getAPNSMessage(object notification, string title)      
 {         
-    Dictionary<string, object> appleMessageMap = new Dictionary<string, object>();         
-    Dictionary<string, object> appMessageMap = new Dictionary<string, object>();          
-    appMessageMap.Add("alert", title);         
-    appMessageMap.Add("badge", 1);         
-    appMessageMap.Add("sound", "default");          
-    appMessageMap.Add("objectInfo", notification);          
-    appleMessageMap.Add("aps", appMessageMap);        
-    return JsonConvert.SerializeObject(appleMessageMap);         
+     Dictionary<string, object> appleMessageMap = new Dictionary<string, object>();         
+     Dictionary<string, object> appMessageMap = new Dictionary<string, object>();          
+     appMessageMap.Add("alert", title);         
+     appMessageMap.Add("badge", 1);         
+     appMessageMap.Add("sound", "default");          
+     appMessageMap.Add("objectInfo", notification);          
+     appleMessageMap.Add("aps", appMessageMap);        
+     return JsonConvert.SerializeObject(appleMessageMap);           
 }       
           
 - This project was implemented with Abstract Factory Design Pattern for adding another sending message service if necessary.
