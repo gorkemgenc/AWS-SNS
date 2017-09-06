@@ -10,7 +10,8 @@ AWS SDK push notification service is used for sending push notification to users
             
 // Constructing Google GCM message          
 public string getGCMMessage(object notification, string title)        
-{        
+{      
+
      Dictionary<string, object> payload = new Dictionary<string, object>();                                         
      payload.Add("message", title);                   
      payload.Add("objectInfo", notification);             
