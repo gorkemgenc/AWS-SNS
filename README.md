@@ -6,7 +6,7 @@ AWS SDK push notification service is used for sending push notification to users
 
 ## Implementations
 
-- JSON format for sending push notification to APNS and GCM      
+JSON format for sending push notification to APNS and GCM      
 
 ```
 // Constructing Google GCM message          
@@ -44,4 +44,9 @@ This project was implemented with Abstract Factory Design Pattern for adding ano
      
 OneSignal vs AWS-SNS
 
-OneSignal is free to use and you can implement onesignal with any language. There are some difference between AmazonSNS and OneSignal. The first difference is Amazon SNS has much more document than OneSignal. Additionally, AWS-SDK is not free but price of using AWS-SDK is cheap. Notice that, if you have distributed system and different projects, you can easily monitor the using AWS SDK on the Amazon CloudWatch. On the other hand, Onesignal Monitoring System is a harder than Amazon CloudWatch for different projects.
+OneSignal is free to use and you can implement onesignal with any language. 
+There are some difference between AmazonSNS and OneSignal. 
+The first difference is Amazon SNS has much more document than OneSignal. 
+Additionally, AWS-SDK is not free but price of using AWS-SDK is cheap. 
+Notice that, if you have distributed system and different projects, you can easily monitor the using AWS SDK on the Amazon CloudWatch. 
+On the other hand, Onesignal Monitoring System is a harder than Amazon CloudWatch for different projects.
