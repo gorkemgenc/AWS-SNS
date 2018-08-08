@@ -1,6 +1,6 @@
 # Amazon-SNS-PushNotification-Service-CSharp
 
-##Explanations
+## Explanations
 
 AWS SDK push notification service is used for sending push notification to users. With SNS you can send messages to a large number of subscribers, including distributed systems and services, and mobile devices. Also you can watch the usage of Amazon SNS service with Amazon CloudWatch platform.  
 
