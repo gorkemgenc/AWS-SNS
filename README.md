@@ -6,7 +6,7 @@ AWS SDK push notification service is used for sending push notification to users
 
 ## Implementations
 
-JSON format for sending push notification to APNS and GCM      
+JSON format for sending push notifications to APNS and GCM      
 
 ```
 // Constructing GCM message for Android          
